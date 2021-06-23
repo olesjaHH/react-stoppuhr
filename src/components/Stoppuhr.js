@@ -12,11 +12,9 @@ class Stoppuhr extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (this.state.milliseconds === 100) {
-            console.log("matija")
             this.setState({ milliseconds: 0, seconds: this.state.seconds +1 });
         }
         if (this.state.seconds === 60) {
-            console.log("matija")
             this.setState({ seconds: 0, minutes: this.state.minutes +1 });
         }
     }
