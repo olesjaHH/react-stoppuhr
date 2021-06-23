@@ -49,23 +49,29 @@ class Stoppuhr extends Component {
     }
     render() { 
         return ( 
-            <div>
-                <span className="field">{this.state.minutes}</span> :
-                <span className="field">{this.state.seconds}</span> :
-                <span className="field">{this.state.milliseconds}</span> <br />
+            <div className="body">
+                <article className="time-field">
+                    <div className="field">{this.state.minutes}</div>
+                    <span className="span"> : </span> 
+                    <div className="field">{this.state.seconds}</div> 
+                    <span className="span"> : </span> 
+                    <div className="field">{this.state.milliseconds}</div>
+                </article>
                
-                    <button className={this.state.isShown ? "hide" : "show"} onClick={() => {
+                <article className="button">
+                    <button className="butt1" className={this.state.isShown ? "hide" : "show"} onClick={() => {
                         this.handleStart();
                         this.handleShown();
                     }} >Start</button>
               
                 <div className={this.state.isShown ? "show" : "hide"}>
-                    <button onClick={this.state.isOn ? this.handleStop : this.handleResume}>{this.state.isOn ? "Stop" : "Resume"}</button>
-                    <button onClick={() => {
+                    <button className="butt2" onClick={this.state.isOn ? this.handleStop : this.handleResume}>{this.state.isOn ? "Stop" : "Resume"}</button>
+                    <button className="butt3" onClick={() => {
                         this.handleReset();
                         this.handleShown();
                     }}>Reset</button>
                 </div>
+                </article>
             </div>
          );
     }

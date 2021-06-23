@@ -1,13 +1,50 @@
-.field {
-  padding: 20px 20px;
-  background: teal;
+.time-field {
+  margin: 5%;
+  display: flex;
 }
-button {
-  margin-top: 5%;
+.field {
+  height: 100px;
+  width: 100px;
+  background: teal;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: whitesmoke;
+}
+.span {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+}
+.button {
+  margin-left: 5%;
+}
+.button button {
+  padding: 10px 50px;
+  border-style: none;
+  border: 2px solid teal;
+  color: teal;
+  margin-right: 9%;
+  font-weight: bold;
+  background: white;
+}
+.button button:hover {
+  background: teal;
+  color: white;
 }
 .hide {
   display: none;
 }
 .show {
   display: block;
+}
+.body {
+  border: 10px solid black;
+  border-radius: 10px;
+  margin: 10%;
+  padding: 5% 20%;
 }
